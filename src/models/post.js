@@ -13,7 +13,7 @@ const Post = {
   update: (id, post) => {
     return knex("posts").where({ id }).update(post).returning("*");
   },
-  delete: () => {
+  delete: (id) => {
     return knex("posts")
       .where({ id })
       .update({ deleted_at: new Date() })

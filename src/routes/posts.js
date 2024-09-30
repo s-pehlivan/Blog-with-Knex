@@ -46,11 +46,17 @@ router.post("/:id", async (req, res) => {
   }
 });
 
-router.delete("/", async (req, res) => {
+router.delete("/:id", async (req, res) => {
+  console.log("req.params.id", req.params.id);
   try {
-    const posts = await Post.getAll();
-    res.json(categories);
-  } catch {
+    const deleted = await Post.delete(req.params.id);
+
+    if (!deleted) {
+      res.status(404).json("Böyle bir kayıt bulunamadı.");
+    }
+    res.json(deleted);
+  } catch (err) {
+    console.log("err", err);
     res.status(400).json({ message: "Hata oldu. Tekrar deneyiniz." });
   }
 });
