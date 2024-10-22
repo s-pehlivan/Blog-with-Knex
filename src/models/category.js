@@ -2,7 +2,7 @@ const knex = require("./knex");
 
 const Category = {
   getAll: () => {
-    return knex("categories").whereNull("deleted_at");
+    return knex("categories").where("deleted_at");
   },
   getById: (id) => {
     return knex("categories").where({ id }).first();
