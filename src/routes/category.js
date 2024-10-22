@@ -4,9 +4,10 @@ const Category = require("../models/category");
 
 router.get("/", async (req, res) => {
   try {
-    const categories = await Category.getAll();
+    const categories = await Category.getAll(req.query);
     res.json(categories);
-  } catch {
+  } catch (err) {
+    console.log("err", err);
     res.status(400).json({ message: "Hata oldu. Tekrar deneyiniz." });
   }
 });

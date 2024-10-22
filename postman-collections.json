@@ -1,0 +1,1397 @@
+{
+	"info": {
+		"_postman_id": "16872955-c86f-4dd7-b68b-4509de7f5877",
+		"name": "db-hw-7734p",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38674135"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories?showDeleted=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "showDeleted",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories?showDeleted=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									],
+									"query": [
+										{
+											"key": "showDeleted",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "621"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26d-ef1GPWup1ZwjzfB6jfTFlGgNctE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:11:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Spor\",\n        \"created_at\": \"2024-09-29T15:48:19.375Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 1,\n        \"name\": \"Teknoloji\",\n        \"created_at\": \"2024-09-29T15:47:53.491Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Haberler\",\n        \"created_at\": \"2024-09-29T15:48:25.319Z\",\n        \"deleted_at\": \"2024-09-29T16:01:30.340Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"News\",\n        \"created_at\": \"2024-10-22T18:37:25.170Z\",\n        \"deleted_at\": \"2024-10-22T18:37:41.135Z\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"News\",\n        \"created_at\": \"2024-10-22T19:11:28.493Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 6,\n        \"name\": \"News\",\n        \"created_at\": \"2024-10-22T19:11:39.849Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 7,\n        \"name\": \"News\",\n        \"created_at\": \"2024-10-22T19:11:40.964Z\",\n        \"deleted_at\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"name\" :  \"News\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n    \"name\" :  \"News\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-6RzqEjJxFdfI2iupv/AbEcSroXE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:11:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 7,\n        \"name\": \"News\",\n        \"created_at\": \"2024-10-22T19:11:40.964Z\",\n        \"deleted_at\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get category by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50-7gWL0DCG4Ms4HqftFHnC1i3VKQo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:14:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Spor\",\n    \"created_at\": \"2024-09-29T15:48:19.375Z\",\n    \"deleted_at\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Haberler\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "Spor",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update category",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\": \"Haberler\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "Spor",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c-NeUl3kuktRsgiaimoMGqRYXl0/I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:14:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"Haberler\",\n        \"created_at\": \"2024-09-29T15:48:25.319Z\",\n        \"deleted_at\": \"2024-09-29T16:01:30.340Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"68-sX7fVuoR6VJBkj+tcD73TvzY5pU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:15:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"name\": \"News\",\n        \"created_at\": \"2024-10-22T18:37:25.170Z\",\n        \"deleted_at\": \"2024-10-22T19:15:17.079Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "get posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts?status=published&category=&showDeleted=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "published"
+								},
+								{
+									"key": "category",
+									"value": ""
+								},
+								{
+									"key": "showDeleted",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts?status=published&category=&showDeleted=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "published"
+										},
+										{
+											"key": "category",
+											"value": ""
+										},
+										{
+											"key": "showDeleted",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "608"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"260-DBTGpsHiogfOLVuDRC31H0+uUK0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:15:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 8,\n        \"category_id\": 1,\n        \"title\": \"AI ve Bilinç - 2\",\n        \"content\": \"PUBLISHED POST\",\n        \"created_at\": \"2024-09-29T16:31:34.093Z\",\n        \"published_at\": \"2024-09-30T15:55:04.971Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 2,\n        \"category_id\": 2,\n        \"title\": \"AI VE BİLİNÇ - 1 - UPDAte yeni\",\n        \"content\": \"GÜNCELLENMİŞ AI ve bilinç konuları çok sık birlikte tartışılan konulardır. Bilinç denilen kavramın gizemleri çözülüp insanın düşünce siseminin bir haritası çıkarılabilirse, AI bunu öğrenebilir mi?\",\n        \"created_at\": \"2024-09-29T16:31:34.093Z\",\n        \"published_at\": \"2024-09-30T15:55:04.971Z\",\n        \"deleted_at\": \"2024-09-30T15:55:04.971Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get post by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get post by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "382"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17e-vB/rAQW4P0qnGpBKA+r8D/84GOg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:18:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"category_id\": 1,\n    \"title\": \"AI VE BİLİNÇ - 1 - UPDAte yeni\",\n    \"content\": \"GÜNCELLENMİŞ AI ve bilinç konuları çok sık birlikte tartışılan konulardır. Bilinç denilen kavramın gizemleri çözülüp insanın düşünce siseminin bir haritası çıkarılabilirse, AI bunu öğrenebilir mi?\",\n    \"created_at\": \"2024-09-29T16:31:21.173Z\",\n    \"published_at\": null,\n    \"deleted_at\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "create post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 9,\n        \"category_id\": 1,\n        \"title\": \"AI ve Bilinç - 2\",\n        \"content\": \"PUBLISHED POST\",\n        \"created_at\": \"2024-09-29T16:31:34.093Z\",\n        \"published_at\": \"2024-09-30T15:55:04.971Z\",\n        \"deleted_at\": null\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"id\": 9,\n        \"category_id\": 1,\n        \"title\": \"AI ve Bilinç - 2\",\n        \"content\": \"PUBLISHED POST\",\n        \"created_at\": \"2024-09-29T16:31:34.093Z\",\n        \"published_at\": \"2024-09-30T15:55:04.971Z\",\n        \"deleted_at\": null\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/posts",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-InWhpSzW+Z21DSwF9NO/hkkixE4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:18:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 9,\n        \"category_id\": 1,\n        \"title\": \"AI ve Bilinç - 2\",\n        \"content\": \"PUBLISHED POST\",\n        \"created_at\": \"2024-09-29T16:31:34.093Z\",\n        \"published_at\": \"2024-09-30T15:55:04.971Z\",\n        \"deleted_at\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"AI VE BİLİNÇ - 1 - UPDAte yeni\",\n    \"content\": \"GÜNCELLENMİŞ AI ve bilinç konuları çok sık birlikte tartışılan konulardır. Bilinç denilen kavramın gizemleri çözülüp insanın düşünce siseminin bir haritası çıkarılabilirse, AI bunu öğrenebilir mi?\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/posts/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"AI VE BİLİNÇ - 1 - UPDAte yeni\",\n    \"content\": \"GÜNCELLENMİŞ AI ve bilinç konuları çok sık birlikte tartışılan konulardır. Bilinç denilen kavramın gizemleri çözülüp insanın düşünce siseminin bir haritası çıkarılabilirse, AI bunu öğrenebilir mi?\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/posts/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "428"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ac-zy4kOVYFaYSrC8gYiRYt6PBBbdg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:18:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"category_id\": 2,\n        \"title\": \"AI VE BİLİNÇ - 1 - UPDAte yeni\",\n        \"content\": \"GÜNCELLENMİŞ AI ve bilinç konuları çok sık birlikte tartışılan konulardır. Bilinç denilen kavramın gizemleri çözülüp insanın düşünce siseminin bir haritası çıkarılabilirse, AI bunu öğrenebilir mi?\",\n        \"created_at\": \"2024-09-29T16:31:34.093Z\",\n        \"published_at\": \"2024-09-30T15:55:04.971Z\",\n        \"deleted_at\": \"2024-09-30T15:55:04.971Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/posts/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"posts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-ItfXYn1fVeLYun6noTwD0xZYk+0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:18:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"category_id\": 2,\n        \"title\": \"Jimnastik\",\n        \"content\": \"Jimnastik alanında rekor kıran John Doe...\",\n        \"created_at\": \"2024-09-29T16:32:11.160Z\",\n        \"published_at\": null,\n        \"deleted_at\": \"2024-10-22T19:18:43.963Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "get comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/comments?commenter=&post=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "commenter",
+									"value": ""
+								},
+								{
+									"key": "post",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get comments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/comments?commenter=&post=2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									],
+									"query": [
+										{
+											"key": "commenter",
+											"value": ""
+										},
+										{
+											"key": "post",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-ejZL4iuhHrbY90fBaT4RfcqlQ/Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:18:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"post_id\": 2,\n        \"content\": \"2. post için yorum 1\",\n        \"commenter_name\": \"Feyza p\",\n        \"created_at\": \"2024-09-30T16:09:47.290Z\",\n        \"deleted_at\": null\n    },\n    {\n        \"id\": 4,\n        \"post_id\": 2,\n        \"content\": \"2. post için yorum 2\",\n        \"commenter_name\": \"Feyza p\",\n        \"created_at\": \"2024-09-30T16:09:51.874Z\",\n        \"deleted_at\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\": 2,\n    \"content\": \"2. post için yorum 2\",\n    \"commenter_name\" : \"Feyza p\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/comments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"post_id\": 2,\n    \"content\": \"2. post için yorum 2\",\n    \"commenter_name\" : \"Feyza p\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/comments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-6jHpvew99yo9b6xFEJNccZgEpf0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:19:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 5,\n        \"post_id\": 2,\n        \"content\": \"2. post için yorum 2\",\n        \"commenter_name\": \"Feyza p\",\n        \"created_at\": \"2024-10-22T19:19:16.038Z\",\n        \"deleted_at\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get comment by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/comments/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get comment by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/comments/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "156"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9c-8j9jVE9kwjefbyIs3abqk3K+R4s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:19:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"post_id\": 1,\n    \"content\": \"İçeril update\",\n    \"commenter_name\": \"Sevde Pe\",\n    \"created_at\": \"2024-09-30T16:09:39.923Z\",\n    \"deleted_at\": \"2024-09-30T16:13:14.861Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "edit comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"commenter_name\" :\"Sevde Pe\",\n    \"content\": \"İçerik update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/comments/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"commenter_name\" :\"Sevde Pe\",\n    \"content\": \"İçerik update\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/comments/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-hzNWLoRRidPbJgn+zAQPdUeHNKI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:19:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"post_id\": 1,\n        \"content\": \"İçerik update\",\n        \"commenter_name\": \"Sevde Pe\",\n        \"created_at\": \"2024-09-30T16:09:26.113Z\",\n        \"deleted_at\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/comments/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete comment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/comments/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9e-iOsce5Qz9OfuiZZz3WBRkLrE5+8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 19:20:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"post_id\": 1,\n        \"content\": \"İçeril update\",\n        \"commenter_name\": \"Sevde Pe\",\n        \"created_at\": \"2024-09-30T16:09:39.923Z\",\n        \"deleted_at\": \"2024-10-22T19:20:07.477Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
